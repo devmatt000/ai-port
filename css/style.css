@@ -1,0 +1,55 @@
+/* Custom styles can go here *//* Custom styles for portfolio */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #e4e4e7;
+}
+.accent {
+  color: #a855f7;
+}
+.btn-primary {
+  background-color: #a855f7;
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #9333ea;
+  transform: scale(1.05);
+}
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.card {
+  background-color: #111;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+.card:hover {
+  background-color: #18181b;
+  transform: translateY(-5px);
+}
+input, textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #e4e4e7;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  outline: none;
+}
+input:focus, textarea:focus {
+  border-color: #a855f7;
+}
+button {
+  background-color: #a855f7;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #9333ea;
+}

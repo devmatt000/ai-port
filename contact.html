@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | James Miller</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link rel="icon" href="assets/profile1.jpg">
+<style>
+body {  background-color:#0a0a0a; color:#e4e4e7; font-family:'Inter',sans-serif; }
+.accent { color:#a855f7; }
+.card { background-color:#111; border-radius:1rem; padding:2rem; margin-bottom:2rem; transition:all 0.3s ease; }
+.card:hover { background-color:#18181b; transform:translateY(-3px); }
+input, textarea { background-color:#1a1a1a; border:1px solid #2a2a2a; color:#e4e4e7; border-radius:0.5rem; padding:0.75rem; width:100%; outline:none; }
+input:focus, textarea:focus { border-color:#a855f7; }
+button { background-color:#a855f7; color:#fff; border-radius:0.5rem; padding:0.75rem 1.5rem; transition:0.3s; cursor:pointer; }
+button:hover { background-color:#9333ea; }
+</style>
+</head>
+<body class="flex flex-col items-center min-h-screen px-6">
+
+<nav class="w-full py-4 fixed top-0 left-0 z-50 bg-gray-900 shadow-md">
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+<a href="index.html" class="text-xl font-bold accent">James Miller</a>
+<div class="space-x-6 flex items-center">
+<a href="index.html" class="hover:text-purple-400">Home</a>
+<a href="projects.html" class="hover:text-purple-400">Projects</a>
+<a href="experience.html" class="hover:text-purple-400">Experience</a>
+<a href="gallery.html" class="hover:text-purple-400">Gallery</a>
+<a href="contact.html" class="hover:text-purple-400">Contact</a>
+</div>
+</div>
+</nav>
+<div class="pt-28"></div>
+
+<header class="text-center mb-10">
+<h1 class="text-5xl font-bold accent mb-2">Get In Touch</h1>
+<p class="text-gray-400">Let’s build something amazing together.</p>
+</header>
+
+<section class="max-w-2xl w-full">
+<div class="card">
+<h2 class="text-2xl font-semibold mb-4 accent">Contact Form</h2>
+<form action="https://formspree.io/f/xqazbkwp" method="POST" class="space-y-4">
+<div>
+<label for="name" class="block mb-1 text-sm text-gray-400">Name</label>
+<input type="text" id="name" name="name" required placeholder="Your Name">
+</div>
+<div>
+<label for="email" class="block mb-1 text-sm text-gray-400">Email</label>
+<input type="email" id="email" name="_replyto" required placeholder="Your Email">
+</div>
+<div>
+<label for="message" class="block mb-1 text-sm text-gray-400">Message</label>
+<textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+</div>
+<div class="text-center">
+<button type="submit" class="font-semibold">Send Message</button>
+</div>
+</form>
+</div>
+
+<div class="card">
+<h2 class="text-2xl font-semibold mb-3 accent">Direct Contact</h2>
+<ul class="space-y-2 text-gray-300">
+<li><strong>Email:</strong> <a href="mailto:jamesm5171996@gmail.com" class="accent hover:underline">jamesm5171996@gmail.com</a></li>
+<li><strong>Telegram:</strong> <a href="https://t.me/devmatt3" class="accent hover:underline">@devmatt3</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/devmatt000" class="accent hover:underline">github.com/devmatt000</a></li>
+<li><strong>LinkedIn:</strong> N/A</li>
+</ul>
+</div>
+</section>
+
+<footer class="mt-12 mb-8 text-gray-500 text-sm text-center">
+© 2025 James Miller | <a href="index.html" class="accent hover:underline">Home</a> | 
+<a href="projects.html" class="accent hover:underline">Projects</a> | 
+<a href="experience.html" class="accent hover:underline">Experience</a> | 
+<a href="gallery.html" class="accent hover:underline">Gallery</a>
+</footer>
+
+<script>
+gsap.from(".card,h1", {opacity:0,y:30,duration:0.8,stagger:0.2, opacity:1});
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience | James Miller</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link rel="icon" href="assets/profile1.jpg">
+<style>
+body { background-color:#0a0a0a; color:#e4e4e7; font-family:'Inter',sans-serif; }
+.accent { color:#a855f7; }
+.card { background-color:#111; border-radius:1rem; padding:1.5rem; margin-bottom:1.5rem; transition:all 0.3s ease; opacity:1; }
+.card:hover { background-color:#18181b; transform:translateY(-3px); }
+.tab-btn { cursor:pointer; padding:0.5rem 1rem; border-radius:0.5rem; margin-right:0.5rem; transition:0.3s; }
+.tab-btn.active { background-color:#a855f7; color:white; }
+.timeline { border-left:2px solid #a855f7; margin-left:1rem; padding-left:1rem; }
+.timeline-item { position:relative; margin-bottom:2rem; }
+.timeline-item::before { content:""; position:absolute; left:-11px; top:0; width:20px; height:20px; background-color:#a855f7; border-radius:50%; }
+</style>
+</head>
+<body class="flex flex-col items-center min-h-screen px-6 bg-gray-900 text-gray-200">
+
+<nav class="w-full py-4 fixed top-0 left-0 z-50 bg-gray-900 shadow-md">
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+<a href="index.html" class="text-xl font-bold accent">James Miller</a>
+<div class="space-x-6 flex items-center">
+<a href="index.html" class="hover:text-purple-400">Home</a>
+<a href="projects.html" class="hover:text-purple-400">Projects</a>
+<a href="experience.html" class="hover:text-purple-400">Experience</a>
+<a href="gallery.html" class="hover:text-purple-400">Gallery</a>
+<a href="contact.html" class="hover:text-purple-400">Contact</a>
+</div>
+</div>
+</nav>
+<div class="pt-28"></div>
+
+<header class="text-center mb-10">
+<h1 class="text-5xl font-bold accent mb-2">Experience & Education</h1>
+<p class="text-gray-400">Professional background of James Miller</p>
+</header>
+
+<div class="flex justify-center mb-6">
+<button class="tab-btn active" onclick="openTab('experience')">Experience</button>
+<button class="tab-btn" onclick="openTab('education')">Education</button>
+</div>
+
+<!-- Experience Tab -->
+<div id="experience" class="tab-content max-w-5xl w-full">
+<div class="timeline">
+<div class="timeline-item card">
+<h3 class="text-xl font-semibold mb-1 accent">AI/ML & Software Engineer | Quantum Dynamics</h3>
+<p class="text-gray-400 mb-2">Utrecht, Netherlands | 03/2023 – 09/2025</p>
+<ul class="list-disc list-inside text-gray-300">
+<li>Designed and deployed end-to-end ML pipelines for predictive analytics, NLP, and
+computer vision.</li>
+<li>Built real-time inference APIs (FastAPI + Docker), reducing response latency by 35%.</li>
+<li>Engineered & fine-tuned LLMs and transformers (BERT, GPT, LLaMA) for chatbots,
+classification, and summarization.</li>
+<li>Processed 10M+ records with advanced data pipelines, boosting model accuracy by
+20%.</li>
+<li>Implemented CI/CD and MLOps best practices with MLflow, Kubeflow, and Airflow.</li>
+<li>Researched & prototyped emerging AI trends (RAG, multimodal models, generative AI).</li>
+<li>Led cross-functional teams in integrating AI models into production, ensuring
+scalability and efficiency.</li>
+</ul>
+</div>
+
+<div class="timeline-item card">
+<h3 class="text-xl font-semibold mb-1 accent">AI/ML Engineer | Confidential</h3>
+<p class="text-gray-400 mb-2">Utrecht, Netherlands | 12/2021 – 02/2023</p>
+<ul class="list-disc list-inside text-gray-300">
+<li>Developed full-stack applications with React, Node.js, and integrated APIs.</li>
+<li>Optimized database performance (MongoDB, MySQL, MSSQL).</li>
+<li>Built & maintained RESTful APIs and GraphQL endpoints.</li>
+<li>Delivered features in Agile sprints, resolving critical performance issues.</li>
+<li>Mentored junior developers, improving code quality and accelerating delivery cycles.</li>
+</ul>
+</div>
+
+<div class="timeline-item card">
+<h3 class="text-xl font-semibold mb-1 accent">Junior Web Developer | Digital Nest</h3>
+<p class="text-gray-400 mb-2">Amsterdam, Netherlands | 06/2019 – 11/2021</p>
+<ul class="list-disc list-inside text-gray-300">
+<li>Designed and deployed user-friendly websites, improving client engagement.</li>
+<li>Handled front-end development (HTML, CSS, JS, PHP).</li>
+<li>Supported backend operations, ensuring data consistency & security.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Education Tab -->
+<div id="education" class="tab-content max-w-5xl w-full hidden">
+<div class="card">
+<h3 class="text-xl font-semibold mb-1 accent">B.Sc. Computer Science</h3>
+<p class="text-gray-400 mb-2">University of Texas, Austin, TX | 2014 – 2018</p>
+<p class="text-gray-300">Focused on Software Engineering, AI, and Machine Learning.</p>
+</div>
+</div>
+
+<footer class="mt-12 mb-8 text-gray-500 text-sm text-center">
+© 2025 James Miller | <a href="index.html" class="accent hover:underline">Home</a> | 
+<a href="projects.html" class="accent hover:underline">Projects</a> | 
+<a href="gallery.html" class="accent hover:underline">Gallery</a> | 
+<a href="contact.html" class="accent hover:underline">Contact</a>
+</footer>
+
+<script>
+function openTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+  document.getElementById(tab).classList.remove('hidden');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+gsap.from(".card,h1", {y:30,duration:0.8,stagger:0.2, opacity:1});
+</script>
+</body>
+</html>

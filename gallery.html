@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | James Miller</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link rel="icon" href="assets/profile1.jpg">
+<style>
+body { background-color:#0a0a0a; color:#e4e4e7; font-family:'Inter',sans-serif;}
+.accent { color:#a855f7; }
+.card { background-color:#111; border-radius:1rem; overflow:hidden; transition:all 0.3s ease; }
+.card:hover { transform:translateY(-3px); background-color:#18181b; }
+</style>
+</head>
+<body class="flex flex-col items-center min-h-screen px-6">
+
+<nav class="w-full py-4 fixed top-0 left-0 z-50 bg-gray-900 shadow-md">
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+<a href="index.html" class="text-xl font-bold accent">James Miller</a>
+<div class="space-x-6 flex items-center">
+<a href="index.html" class="hover:text-purple-400">Home</a>
+<a href="projects.html" class="hover:text-purple-400">Projects</a>
+<a href="experience.html" class="hover:text-purple-400">Experience</a>
+<a href="gallery.html" class="hover:text-purple-400">Gallery</a>
+<a href="contact.html" class="hover:text-purple-400">Contact</a>
+</div>
+</div>
+</nav>
+<div class="pt-28"></div>
+
+<header class="text-center mb-10">
+<h1 class="text-5xl font-bold accent mb-2">Gallery</h1>
+<p class="text-gray-400">Professional images and screenshots of my projects</p>
+</header>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl px-6 mb-16">
+<div class="card shadow-lg">
+<img src="assets/profile1.jpg" alt="Profile 1" class="w-full h-64 object-cover"/>
+</div>
+<div class="card shadow-lg">
+<img src="assets/profile2.jpg" alt="Profile 2" class="w-full h-64 object-cover"/>
+</div>
+<div class="card shadow-lg">
+<img src="assets/office.jpg" alt="Office" class="w-full h-64 object-cover"/>
+</div>
+<div class="card shadow-lg">
+<img src="assets/project1.jpg" alt="Project 1" class="w-full h-64 object-cover"/>
+</div>
+<div class="card shadow-lg">
+<img src="assets/project2.jpg" alt="Project 2" class="w-full h-64 object-cover"/>
+</div>
+<div class="card shadow-lg">
+<img src="assets/project3.jpg" alt="Project 3" class="w-full h-64 object-cover"/>
+</div>
+</section>
+
+<footer class="mt-12 mb-8 text-gray-500 text-sm text-center">
+© 2025 James Miller | <a href="index.html" class="accent hover:underline">Home</a> | 
+<a href="projects.html" class="accent hover:underline">Projects</a> | 
+<a href="experience.html" class="accent hover:underline">Experience</a> | 
+<a href="contact.html" class="accent hover:underline">Contact</a>
+</footer>
+
+<script>
+gsap.from(".card,h1", {opacity:0,y:30,duration:0.8,stagger:0.2, opacity:1});
+</script>
+</body>
+</html>
